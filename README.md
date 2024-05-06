@@ -4,12 +4,13 @@ This is code written while taking a GraphQL tutorial...
 
 h3. Mutation (createProduct)
 
-```mutation {
+```json
+mutation {
   createProduct(input : {
-    name: "Brick"
-    description: "Yukon Concrete"
+    name: "Rock"
+    description: "For throwing at people"
     price: 6.28
-    soldout: false
+    soldout: SOLD_OUT
     inventory: 12
     stores: [
       {store: "Dunwoody"},
@@ -27,13 +28,15 @@ h3. Mutation (createProduct)
 
 h3. Response (createProduct)
 
-```{
+```json
+{
   "data": {
-    "getProduct": {
+    "createProduct": {
+      "id": "562cf1ea2dc9c9363e17",
       "price": 6.28,
-      "description": "Yukon Concrete",
-      "name": "Brick",
-      "inventory": 12
+      "name": "Rock",
+      "inventory": 12,
+      "description": "For throwing at people"
     }
   }
 }
@@ -41,11 +44,14 @@ h3. Response (createProduct)
 
 h3. Query (getProduct)
 
-```query {
-  getProduct(id: "c483d1bc4ede946bc4e0") {
+```json
+query {
+  getProduct(id: "562cf1ea2dc9c9363e17") {
     price
     description
     name
+    inventory
+    soldout
   }
 
 }
@@ -53,12 +59,15 @@ h3. Query (getProduct)
 
 h3. Response (getProduct)
 
-```{
+```json
+{
   "data": {
     "getProduct": {
       "price": 6.28,
-      "description": "Yukon Concrete",
-      "name": "Brick"
+      "description": "For throwing at people",
+      "name": "Rock",
+      "inventory": 12,
+      "soldout": "SOLD_OUT"
     }
   }
 }
