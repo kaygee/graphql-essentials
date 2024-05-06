@@ -24,6 +24,7 @@ h3. Mutation
 ```
 
 h3. Response
+
 ```{
   "data": {
     "createProduct": {
