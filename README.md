@@ -148,8 +148,9 @@ h3. Query
 query {
   getAllProducts {
     name
+    price
+    inventory
   }
-
 }
 ```
 
@@ -160,7 +161,9 @@ h3. Response
   "data": {
     "getAllProducts": [
       {
-        "name": "Rock"
+        "name": "Rock",
+        "price": 6.28,
+        "inventory": 12
       }
     ]
   }
