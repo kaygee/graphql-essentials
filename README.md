@@ -30,7 +30,7 @@ mutation {
 
 h4. Response
 
-```graphql
+```json
 {
   "data": {
     "createProduct": {
@@ -73,7 +73,7 @@ mutation {
 
 h4. Response
 
-```graphql
+```json
 {
   "data": {
     "updateProduct": {
@@ -106,7 +106,7 @@ query {
 
 h3. Response (getProduct)
 
-```graphql
+```json
 {
   "data": {
     "getProduct": {
