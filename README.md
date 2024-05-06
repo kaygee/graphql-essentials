@@ -170,7 +170,7 @@ query {
 }
 ```
 
-h3. Adding Persistence
+## Adding Persistence
 
 Use this link (https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/).
 
