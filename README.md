@@ -6,7 +6,7 @@ h3. createProduct()
 
 h4. Mutation
 
-```json
+```graphql
 mutation {
   createProduct(input : {
     name: "Rock"
@@ -30,7 +30,7 @@ mutation {
 
 h4. Response
 
-```json
+```graphql
 {
   "data": {
     "createProduct": {
@@ -48,7 +48,7 @@ h3. updateProduct()
 
 h4. Mutation
 
-```json
+```graphql
 mutation {
   updateProduct(input : {
     id: "6639441e8b25572823d219e8"
@@ -73,7 +73,7 @@ mutation {
 
 h4. Response
 
-```json
+```graphql
 {
   "data": {
     "updateProduct": {
@@ -91,7 +91,7 @@ h3. getProduct()
 
 h4. Query
 
-```json
+```graphql
 query {
   getProduct(id: "562cf1ea2dc9c9363e17") {
     price
@@ -106,7 +106,7 @@ query {
 
 h3. Response (getProduct)
 
-```json
+```graphql
 {
   "data": {
     "getProduct": {
