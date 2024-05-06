@@ -32,7 +32,15 @@ const resolvers = {
         try {
             const updateWidget = await Widgets.findOneAndUpdate({_id: input.id}, input, {new: true});
             return updateWidget;
-        }  catch (error){
+        } catch (error){
+            throw new Error(error);
+        }
+    },
+    deleteProduct: async ({ id }) => {
+        try {
+            await Widgets.deleteOne({ _id: id });
+            return 'Deleted'
+        } catch (error){
             throw new Error(error);
         }
     }

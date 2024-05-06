@@ -2,7 +2,7 @@
 
 This is code written while taking a GraphQL tutorial...
 
-h3. createProduct()
+h3. createProduct(ProductInput)
 
 h4. Mutation
 
@@ -44,7 +44,7 @@ h4. Response
 }
 ```
 
-h3. updateProduct()
+h3. updateProduct(ProductInput)
 
 h4. Mutation
 
@@ -87,7 +87,27 @@ h4. Response
 }
 ```
 
-h3. getProduct()
+h3. deleteProduct(id)
+
+h4. Mutation
+
+```graphql
+mutation {
+  deleteProduct(id : "6639441e8b25572823d219e8")
+}
+```
+
+h4. Response
+
+```json
+{
+  "data": {
+    "deleteProduct": "Deleted"
+  }
+}
+```
+
+h3. getProduct(id)
 
 h4. Query
 
