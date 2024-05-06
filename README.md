@@ -2,9 +2,9 @@
 
 This is code written while taking a GraphQL tutorial...
 
-h3. createProduct(ProductInput)
+## createProduct(ProductInput)
 
-h4. Mutation
+### Mutation
 
 ```graphql
 mutation {
@@ -28,7 +28,7 @@ mutation {
 }
 ```
 
-h4. Response
+### Response
 
 ```json
 {
@@ -44,9 +44,9 @@ h4. Response
 }
 ```
 
-h3. updateProduct(ProductInput)
+## updateProduct(ProductInput)
 
-h4. Mutation
+### Mutation
 
 ```graphql
 mutation {
@@ -71,7 +71,7 @@ mutation {
 }
 ```
 
-h4. Response
+### Response
 
 ```json
 {
@@ -87,9 +87,9 @@ h4. Response
 }
 ```
 
-h3. deleteProduct(id)
+## deleteProduct(id)
 
-h4. Mutation
+### Mutation
 
 ```graphql
 mutation {
@@ -97,7 +97,7 @@ mutation {
 }
 ```
 
-h4. Response
+### Response
 
 ```json
 {
@@ -107,9 +107,9 @@ h4. Response
 }
 ```
 
-h3. getProduct(id)
+## getProduct(id)
 
-h4. Query
+### Query
 
 ```graphql
 query {
@@ -124,7 +124,7 @@ query {
 }
 ```
 
-h3. Response (getProduct)
+### Response (getProduct)
 
 ```json
 {
@@ -140,9 +140,9 @@ h3. Response (getProduct)
 }
 ```
 
-h4. getAllProducts()
+## getAllProducts()
 
-h3. Query
+### Query
 
 ```graphql
 query {
@@ -154,7 +154,7 @@ query {
 }
 ```
 
-h3. Response
+### Response
 
 ```json
 {
