@@ -2,7 +2,7 @@
 
 This is code written while taking a GraphQL tutorial...
 
-h3. Mutation
+h3. Mutation (createProduct)
 
 ```mutation {
   createProduct(input : {
@@ -10,6 +10,7 @@ h3. Mutation
     description: "Yukon Concrete"
     price: 6.28
     soldout: false
+    inventory: 12
     stores: [
       {store: "Dunwoody"},
       {store: "Canton"}
@@ -18,26 +19,27 @@ h3. Mutation
     id
     price
     name
+    inventory
     description
   }
 }
 ```
 
-h3. Response
+h3. Response (createProduct)
 
 ```{
   "data": {
-    "createProduct": {
-      "id": "c483d1bc4ede946bc4e0",
+    "getProduct": {
       "price": 6.28,
+      "description": "Yukon Concrete",
       "name": "Brick",
-      "description": "Yukon Concrete"
+      "inventory": 12
     }
   }
 }
 ```
 
-h3. Query
+h3. Query (getProduct)
 
 ```query {
   getProduct(id: "c483d1bc4ede946bc4e0") {
@@ -49,7 +51,7 @@ h3. Query
 }
 ```
 
-h3. Response
+h3. Response (getProduct)
 
 ```{
   "data": {
