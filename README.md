@@ -1,3 +1,7 @@
+# GraphQL Essentials
+
+This is code written while taking a GraphQL tutorial...
+
 h3. Mutation
 
 ```mutation {
@@ -33,6 +37,7 @@ h3. Response
 ```
 
 h3. Query
+
 ```query {
   getProduct(id: "c483d1bc4ede946bc4e0") {
     price
@@ -44,6 +49,7 @@ h3. Query
 ```
 
 h3. Response
+
 ```{
   "data": {
     "getProduct": {
