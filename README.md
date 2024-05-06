@@ -140,6 +140,33 @@ h3. Response (getProduct)
 }
 ```
 
+h4. getAllProducts()
+
+h3. Query
+
+```graphql
+query {
+  getAllProducts {
+    name
+  }
+
+}
+```
+
+h3. Response
+
+```json
+{
+  "data": {
+    "getAllProducts": [
+      {
+        "name": "Rock"
+      }
+    ]
+  }
+}
+```
+
 h3. Adding Persistence
 
 Use this link (https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/).

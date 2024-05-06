@@ -43,6 +43,13 @@ const resolvers = {
         } catch (error){
             throw new Error(error);
         }
+    },
+    getAllProducts: async () => {
+        try {
+            return await Widgets.find({});
+        } catch (error){
+            throw new Error(error);
+        }
     }
 }
 
