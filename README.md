@@ -2,7 +2,9 @@
 
 This is code written while taking a GraphQL tutorial...
 
-h3. Mutation (createProduct)
+h3. createProduct()
+
+h4. Mutation
 
 ```json
 mutation {
@@ -26,7 +28,7 @@ mutation {
 }
 ```
 
-h3. Response (createProduct)
+h4. Response
 
 ```json
 {
@@ -42,7 +44,52 @@ h3. Response (createProduct)
 }
 ```
 
-h3. Query (getProduct)
+h3. updateProduct()
+
+h4. Mutation
+
+```json
+mutation {
+  updateProduct(input : {
+    id: "6639441e8b25572823d219e8"
+    name: "Red Brick"
+    description: "For throwing at windows"
+    price: 1.01
+    soldout: ON_SALE
+    inventory: 39
+    stores: [
+      {store: "Savannah"},
+      {store: "Helen"}
+    ]
+  }) {
+    id
+    price
+    name
+    inventory
+    description
+  }
+}
+```
+
+h4. Response
+
+```json
+{
+  "data": {
+    "updateProduct": {
+      "id": "6639441e8b25572823d219e8",
+      "price": 1.01,
+      "name": "Red Brick",
+      "inventory": 39,
+      "description": "For throwing at windows"
+    }
+  }
+}
+```
+
+h3. getProduct()
+
+h4. Query
 
 ```json
 query {
