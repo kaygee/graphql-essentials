@@ -16,7 +16,8 @@ h3. Mutation
     name
     description
   }
-}```
+}
+```
 
 h3. Response
 ```{
@@ -29,6 +30,7 @@ h3. Response
     }
   }
 }
+```
 
 h3. Query
 ```query {
@@ -38,7 +40,8 @@ h3. Query
     name
   }
 
-}```
+}
+```
 
 h3. Response
 ```{
@@ -49,4 +52,5 @@ h3. Response
       "name": "Brick"
     }
   }
-}```
+}
+```
