@@ -2,9 +2,93 @@
 
 This is code written while taking a GraphQL tutorial...
 
+## Fragments
+
+### Query (using a fragment)
+
+```graphql
+query {
+  allProducts: getAllProducts {
+		...productFragment
+  }
+	specificProduct: getProduct(id: "663941dd64add6906d9cb92a"){
+		...productFragment
+  }
+}
+
+fragment productFragment on Product {
+  name
+  description
+  price
+}
+```
+
+### Response (using fragment)
+
+```json
+{
+  "data": {
+    "allProducts": [
+      {
+        "name": "Rock",
+        "description": "For throwing at people",
+        "price": 6.28
+      }
+    ],
+    "specificProduct": {
+      "name": "Rock",
+      "description": "For throwing at people",
+      "price": 6.28
+    }
+  }
+}
+```
+
+## Aliases
+
+### Query (using aliases)
+
+```graphql
+query {
+  allProducts: getAllProducts {
+    id
+    name
+    price
+    inventory
+  }
+  specificProduct: getProduct(id: "663941dd64add6906d9cb92a"){
+    id
+    name
+    description
+  }
+}
+```
+
+### Response (using aliases)
+
+```json
+{
+  "data": {
+    "allProducts": [
+      {
+        "id": "663941dd64add6906d9cb92a",
+        "name": "Rock",
+        "price": 6.28,
+        "inventory": 12
+      }
+    ],
+    "specificProduct": {
+      "id": "663941dd64add6906d9cb92a",
+      "name": "Rock",
+      "description": "For throwing at people"
+    }
+  }
+}
+```
+
 ## createProduct(ProductInput)
 
-### Mutation
+### Mutation - createProduct(ProductInput)
 
 ```graphql
 mutation {
@@ -28,7 +112,7 @@ mutation {
 }
 ```
 
-### Response
+### Response - createProduct(ProductInput)
 
 ```json
 {
@@ -46,7 +130,7 @@ mutation {
 
 ## updateProduct(ProductInput)
 
-### Mutation
+### Mutation - updateProduct(ProductInput)
 
 ```graphql
 mutation {
@@ -71,7 +155,7 @@ mutation {
 }
 ```
 
-### Response
+### Response - updateProduct(ProductInput)
 
 ```json
 {
@@ -89,7 +173,7 @@ mutation {
 
 ## deleteProduct(id)
 
-### Mutation
+### Mutation - deleteProduct(id)
 
 ```graphql
 mutation {
@@ -97,7 +181,7 @@ mutation {
 }
 ```
 
-### Response
+### Response - deleteProduct(id)
 
 ```json
 {
@@ -109,7 +193,7 @@ mutation {
 
 ## getProduct(id)
 
-### Query
+### Query - getProduct(id)
 
 ```graphql
 query {
@@ -124,7 +208,7 @@ query {
 }
 ```
 
-### Response (getProduct)
+### Response - getProduct(id)
 
 ```json
 {
@@ -142,7 +226,7 @@ query {
 
 ## getAllProducts()
 
-### Query
+### Query - getAllProducts()
 
 ```graphql
 query {
@@ -154,7 +238,7 @@ query {
 }
 ```
 
-### Response
+### Response - getAllProducts()
 
 ```json
 {
